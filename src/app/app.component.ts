@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'udemy-max-assignment3';
+  showPassword = false;
+  clicks = [];
+
+  onDetailsClick = () => {
+    this.clicks.push(Date.now());
+    this.showPassword = !this.showPassword;
+  }
+
+  getBackGround = index => {
+    return index >= 5 ? 'blue' : 'transparent';
+  }
 }
